@@ -1,0 +1,16 @@
+{
+  "body": null,
+  "headers": {
+    "Host": "localhost:3000"
+  },
+  "httpMethod": "GET",
+  "path": "/zoo/lazy",
+  "pathParameters": { "proxy": "zoo/lazy" },
+  "queryStringParameters": null,
+  "requestContext": {
+    "httpMethod": "GET",
+    "path": "/zoo/lazy"
+  },
+  "resource": "/{proxy+}",
+  "stageVariables": null
+}
