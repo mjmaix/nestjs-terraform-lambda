@@ -16,6 +16,12 @@ variable "app_version" {
   type        = string
 }
 
+variable "project_org" {
+  default     = "mja"
+  description = "The organization's abbreviation"
+  type        = string
+}
+
 variable "project_name" {
   default     = "nestjs-terraform-lambda"
   description = "The project name"
