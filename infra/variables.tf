@@ -28,8 +28,9 @@ variable "project_description" {
   type        = string
 }
 
-variable "bucket_name" {
+variable "lambda_bucket_name" {
   default     = "nestjs-terraform-lambda"
-  description = "The bucket name"
+  description = "The lambda bucket name"
   type        = string
 }
+

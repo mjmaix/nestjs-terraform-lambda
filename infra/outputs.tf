@@ -3,9 +3,9 @@ output "base_url" {
   value       = aws_apigatewayv2_stage.stage.invoke_url
 }
 
-output "bucket_name" {
-  description = "Name of the s3 bucket used to store function code"
-  value       = aws_s3_bucket.bucket.id
+output "lambda_bucket_name" {
+  description = "Name of the lambda s3 bucket used to store function code"
+  value       = aws_s3_bucket.lambda_bucket.id
 }
 
 output "function_name" {

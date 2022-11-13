@@ -1,11 +1,7 @@
-locals {
-  now_stamp = formatdate("YYYYMMDDhhmmss", timestamp())
-}
-
 data "archive_file" "dist" {
   source_dir       = "${path.module}/../dist"
   output_file_mode = "0666"
-  output_path      = "${path.module}/.terraform/archive_files/lambda-${local.now_stamp}.zip"
+  output_path      = "${path.module}/.terraform/archive_files/lambda.zip"
   type             = "zip"
 
   depends_on = [null_resource.main]

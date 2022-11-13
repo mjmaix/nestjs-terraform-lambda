@@ -3,8 +3,8 @@ resource "aws_lambda_function" "function" {
   handler          = "src/lambda.handler"
   role             = aws_iam_role.role.arn
   runtime          = "nodejs16.x"
-  s3_bucket        = aws_s3_bucket.bucket.id
-  s3_key           = aws_s3_object.bucket_object.key
+  s3_bucket        = aws_s3_bucket.lambda_bucket.id
+  s3_key           = aws_s3_object.lambda_bucket_object.key
   source_code_hash = data.archive_file.dist.output_base64sha256
   timeout          = "10"
 
