@@ -22,5 +22,10 @@ export const handler: Handler = async (
   // console.log('handler event', event);
   // console.log('handler context', context);
 
-  return server(event, context, callback);
+  try {
+    console.time('#perf handler time');
+    return server(event, context, callback);
+  } finally {
+    console.timeEnd('#perf handler time');
+  }
 };

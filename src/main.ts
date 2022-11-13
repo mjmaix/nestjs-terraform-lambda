@@ -19,7 +19,7 @@ function setupSwagger(app: INestApplication) {
 }
 
 export async function bootstrap(): Promise<Handler> {
-  console.time('startup time');
+  console.time('#perf bootup time');
   const app = await NestFactory.create(AppModule);
 
   setupSwagger(app);
@@ -27,7 +27,7 @@ export async function bootstrap(): Promise<Handler> {
   const port = env.PORT || 3000;
   await app.listen(port);
   console.log(`Now listening on port ${port}`);
-  console.timeEnd('startup time');
+  console.timeEnd('#perf bootup time');
 
   const expressApp = app.getHttpAdapter().getInstance();
   return serverlessExpress({ app: expressApp });

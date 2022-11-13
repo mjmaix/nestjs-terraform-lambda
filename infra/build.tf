@@ -8,10 +8,10 @@ data "archive_file" "dist" {
   output_path      = "${path.module}/.terraform/archive_files/lambda-${local.now_stamp}.zip"
   type             = "zip"
 
-  depends_on = [null_resource.main]
+  depends_on = [null_resource.build]
 }
 
-resource "null_resource" "main" {
+resource "null_resource" "build" {
 
   triggers = {
     updated_at = timestamp()
