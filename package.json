@@ -19,7 +19,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "infra:deploy": "cd infra && terraform apply --auto-approve"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
@@ -29,6 +30,7 @@
     "@nestjs/swagger": "^6.1.3",
     "@vendia/serverless-express": "^4.10.1",
     "aws-lambda": "^1.0.7",
+    "helmet": "^6.0.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",

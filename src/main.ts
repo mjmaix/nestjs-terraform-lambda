@@ -3,6 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import serverlessExpress from '@vendia/serverless-express';
 import { Handler } from 'aws-lambda';
+import helmet from 'helmet';
 import { env } from 'process';
 
 import * as pkg from '../package.json';
@@ -21,8 +22,11 @@ function setupSwagger(app: INestApplication) {
 export async function bootstrap(): Promise<Handler> {
   console.time('#perf bootup time');
   const app = await NestFactory.create(AppModule);
+  app.use(helmet());
 
-  setupSwagger(app);
+  if (env.ENV !== 'prod') {
+    setupSwagger(app);
+  }
 
   const port = env.PORT || 3000;
   await app.listen(port);
