@@ -40,3 +40,7 @@ variable "lambda_bucket_name" {
   type        = string
 }
 
+variable "backend_force_destroy" {
+  default = false
+  description = "To delete including the TF State deployment"
+}
