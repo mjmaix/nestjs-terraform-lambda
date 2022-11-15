@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "",
   "author": "M.J. Abadilla",
-  "private": true,
-  "license": "UNLICENSED",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
