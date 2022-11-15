@@ -4,15 +4,15 @@ Efficient NestJS for small API. Terraform with remote state setup for deploying 
 
 ## Files and Folders
 
-| Folder                | Purpose                      |
-| --------------------- | ---------------------------- |
-| (root)                | API. Initialized with NestJS |
-| ./src/lambda.ts       | Entry point for AWS Lambda   |
-| ./src/http-runnder.ts | locadevelopment entry point  |
-| ./infra               | IaC to AWS                   |
-| ./test                | E2E tests                    |
-| ./src                 | NestJS TypeScript codes      |
-| ./runners             | Local development utils      |
+| Folder                | Purpose                       |
+| --------------------- | ----------------------------- |
+| (root)                | API. Initialized with NestJS  |
+| ./src/lambda.ts       | Entry point for AWS Lambda    |
+| ./src/http-runnder.ts | local development entry point |
+| ./infra               | IaC to AWS                    |
+| ./test                | E2E tests                     |
+| ./src                 | NestJS TypeScript codes       |
+| ./runners             | Local development utils       |
 
 ## Ways of working
 
