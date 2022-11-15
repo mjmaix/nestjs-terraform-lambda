@@ -27,7 +27,7 @@ Use NestJS API for local development
 
 ### Deployment to AWS
 
-Read the `readme.md` on `./infra`. Try `make reset` to try the Terraform deployment.
+Read the `readme.md` on `./infra`. Try `make reset` to try the Terraform deployment. Run `make destroy` to delete the created resources.
 
 ## Take note
 
@@ -38,7 +38,13 @@ Read the `readme.md` on `./infra`. Try `make reset` to try the Terraform deploym
 
 ### Lambda performance
 
-The initial boot usually takes 4secs while the succeeding requests within the warmup period is <400ms
+```log
+... INFO #perf bootup time: 4.315s
+... INFO #perf handler time: 61.218ms
+... INFO #perf handler time: 0.761ms
+... INFO #perf handler time: 0.668ms
+... INFO #perf handler time: 0.749ms
+```
 
 ## References
 

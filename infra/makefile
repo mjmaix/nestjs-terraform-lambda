@@ -9,3 +9,6 @@ reset:
 	terraform init
 	terraform apply -auto-approve
 	terraform init -force-copy
+
+destroy:
+	terraform destroy -auto-approve
