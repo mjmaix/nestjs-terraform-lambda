@@ -27,13 +27,7 @@ Use NestJS API for local development
 
 ### Deployment to AWS
 
-Read the `readme.md` on `./infra`. Try `make reset` to try the Terraform deployment.
-
-##### To delete tfstate.
-
-1. Create `infra/terraform.tfvars` with content `backend_force_destroy=true`
-2. Run `make destroy` to delete the created resources.
-3. There are syncing errors after but it seemed to delete the files. Please verify your account's resources to avoid unwanted costs
+Read the `readme.md` on `./infra`.
 
 ## Take note
 
